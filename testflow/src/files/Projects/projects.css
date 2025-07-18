@@ -1,0 +1,93 @@
+.projects-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  color: #000;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1 1 30%;
+  background-color: #e8e7f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-name {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  min-height: 50px; /* keep consistent height */
+}
+
+.probtngrp {
+  display: flex;
+  gap: 1rem;
+}
+
+.probtn {
+  padding: 0.5rem 1.2rem;
+  background-color: #d3c9f5; 
+  border-radius: 5px;
+  text-decoration: none;
+  color: #3a2ca8; 
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.probtn:hover {
+  background-color: #b9aef7; 
+  color: #1a0d6b; }
+
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .project-card {
+    flex: 1 1 45%; /* two cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%; /* one card per row */
+  }
+}

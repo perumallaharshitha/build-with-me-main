@@ -1,0 +1,65 @@
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center cards horizontally */
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 20px 0;
+  gap: 20px; /* space between cards */
+  background: none;
+}
+
+.timeline-item {
+  flex: 1 1 45%; /* grow, shrink, basis 45% for 2 per row with some gap */
+  max-width: 45%; /* keep max width */
+  box-sizing: border-box;
+}
+
+.timeline-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.timeline-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.text-content {
+  margin-top: 15px;
+}
+
+.text-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.text-content p {
+  color: #555;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 20px 0;
+  color: #333;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* Responsive: stack cards vertically on small screens */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,99 @@
+.certifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #3a3a3a;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Restrict width of each accordion panel */
+.accordion {
+  width: 100%;
+  max-width: 650px; /* <- Adjust this to reduce width */
+  background-color: #f4f4fb;
+  border: 1px solid #cfcfe7;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #e8e7f6;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #d7d5f2;
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #fff;
+}
+
+.cert-list {
+  list-style: none;
+  padding: 1rem 1.2rem;
+  margin: 0;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #ececec;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.cert-item:last-child {
+  border-bottom: none;
+}
+
+.cert-item a {
+  text-decoration: none;
+  color: #5a4fcf;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.cert-item a:hover {
+  color: #3e3aa1;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+  .accordion {
+    max-width: 95%;
+  }
+
+  .accordion-header {
+    font-size: 1rem;
+  }
+
+  .cert-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}

@@ -1,0 +1,123 @@
+.cp-container {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  color: #000;
+}
+
+.cp-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.cp-section {
+  margin-bottom: 3rem;
+}
+
+.cp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cp-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-link {
+  color: #000;
+  font-size: 1.5rem; /* same as heading */
+  text-decoration: none; /* remove underline */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Badge card only contains image */
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(92, 87, 168, 0.15);
+  transition: transform 0.2s ease;
+  background-color: #f2f2fb;
+  position: relative;
+}
+
+/* No background for hackerrank badges */
+.badge-item.no-bg {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.badge-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(92, 87, 168, 0.3);
+}
+
+/* This styles the LeetCode image as the card */
+.badge-card-img {
+  width: 300px; /* increased from 100px */
+  height: auto;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: transparent; /* removed background */
+  box-shadow: none; /* remove card shadow */
+  transition: transform 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.badge-card-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* The wrapper no longer provides a card style, just alignment */
+.badge-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Text is now clearly outside the image card */
+.badge-name-outside {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cp-title {
+    font-size: 1.5rem;
+  }
+
+  .cp-header h3,
+  .profile-link {
+    font-size: 1.3rem;
+  }
+
+  .badge-img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
